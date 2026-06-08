@@ -3,13 +3,7 @@ const router      = Router();
 const mysql       = require("mysql");
 const { v4: uuidv4 } = require("uuid");
 
-const db = mysql.createConnection({
-    host:     "sql7.freesqldatabase.com",
-    user:     "sql7824067",
-    password: "dgDRtLqi5r",
-    database: "sql7824067",
-    port:     3306
-});
+const db = require("../connection");
 
 db.connect((error) => {
     if (error) console.error("[MySQL] Error en anuncios.js:", error.message);

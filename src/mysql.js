@@ -2,14 +2,8 @@ const { Router } = require("express");
 const router      = Router();
 const mysql       = require("mysql");
 
-// ── Conexión con FreeSQLdatabase ─────────────────────────────────────────────
-const db = mysql.createConnection({
-    host:     "sql7.freesqldatabase.com",
-    user:     "sql7824067",
-    password: "dgDRtLqi5r",
-    database: "sql7824067",
-    port:     3306
-});
+
+const db = require("connection");
 
 db.connect((error) => {
     if (error) {
