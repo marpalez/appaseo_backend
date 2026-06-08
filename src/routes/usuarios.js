@@ -1,12 +1,10 @@
 const { Router } = require("express");
 const router      = Router();
-const mysql       = require("mysql");
+//const mysql       = require("mysql");
 
 const db = require("../connection");
 
-db.connect((error) => {
-    if (error) console.error("[MySQL] Error en usuarios.js:", error.message);
-});
+
 
 function obtenerUsuarioCompleto(email, callback) {
     db.query("SELECT * FROM usuarios WHERE email = ?", [email], (err, rows) => {

@@ -1,12 +1,9 @@
 const { Router } = require("express");
 const router      = Router();
-const mysql       = require("mysql");
+//const mysql       = require("mysql");
 
 const db = require("../connection");
 
-db.connect((error) => {
-    if (error) console.error("[MySQL] Error en valoraciones.js:", error.message);
-});
 
 router.post("/addValoracion", (req, res) => {
     const { emailCuidador, emailValorador, nombreValorador, puntuacion, descripcion } = req.body;

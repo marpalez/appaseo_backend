@@ -1,13 +1,11 @@
 const { Router } = require("express");
 const router      = Router();
-const mysql       = require("mysql");
+//const mysql       = require("mysql");
 const { v4: uuidv4 } = require("uuid");
 
 const db = require("../connection");
 
-db.connect((error) => {
-    if (error) console.error("[MySQL] Error en anuncios.js:", error.message);
-});
+
 
 router.post("/publicarAnuncio", (req, res) => {
     const { emailCuidador, nombreCuidador, poblacion, tiposMascota,
