@@ -1,17 +1,8 @@
 const { Router } = require("express");
 const router      = Router();
-const mysql       = require("mysql");
 
 
-const db = require("connection");
-
-db.connect((error) => {
-    if (error) {
-        console.error("[MySQL] Error de conexión:", error.message);
-    } else {
-        console.log("[MySQL] Conexión establecida correctamente.");
-    }
-});
+const db = require("./connection");
 
 // ════════════════════════════════════════════════════════════════════════════
 //  GET /api/mysql/usuarios — lista todos los usuarios
