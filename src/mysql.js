@@ -56,7 +56,7 @@ router.post("/registro", (req, res) => {
     if (!email || !contrasena || !nombre || !poblacion)
         return res.status(400).json({ exito: false, mensaje: "Required fields are missing" });
 
-    const sqlCheck = "SELECT id FROM usuarios WHERE email = ?";
+    const sqlCheck = "SELECT email FROM usuarios WHERE email = ?";
     db.query(sqlCheck, [email.toLowerCase()], (err, result) => {
         if (err)           return res.status(500).json({ exito: false, mensaje: err.message });
         if (result.length) return res.status(409).json({ exito: false, mensaje: "El email ya está registrado." });
