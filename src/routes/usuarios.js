@@ -27,11 +27,11 @@ router.post("/login", (req, res) => {
 
     db.query("SELECT * FROM usuarios WHERE email = ?", [email.toLowerCase()], (err, rows) => {
         if (err)          return res.status(500).json({ exito: false, mensaje: err.message });
-        if (!rows.length) return res.status(404).json({ exito: false, mensaje: "El email introducido no está registrado." });
+        if (!rows.length) return res.status(404).json({ exito: false, mensaje: "The email is not registered" });
 
         const usuario = rows[0];
         if (usuario.contrasena !== contrasena)
-            return res.status(401).json({ exito: false, mensaje: "La contraseña es incorrecta." });
+            return res.status(401).json({ exito: false, mensaje: "Incorrect password" });
 
         obtenerUsuarioCompleto(email.toLowerCase(), (err, usuarioCompleto) => {
             if (err) return res.status(500).json({ exito: false, mensaje: err.message });
@@ -43,11 +43,11 @@ router.post("/login", (req, res) => {
 router.post("/registro", (req, res) => {
     const { email, contrasena, nombre, poblacion } = req.body;
     if (!email || !contrasena || !nombre || !poblacion)
-        return res.status(400).json({ exito: false, mensaje: "Faltan campos obligatorios." });
+        return res.status(400).json({ exito: false, mensaje: "Required fields are missing" });
 
     db.query("SELECT id FROM usuarios WHERE email = ?", [email.toLowerCase()], (err, rows) => {
         if (err)         return res.status(500).json({ exito: false, mensaje: err.message });
-        if (rows.length) return res.status(409).json({ exito: false, mensaje: "El email introducido ya se encuentra registrado." });
+        if (rows.length) return res.status(409).json({ exito: false, mensaje: "The email is already registered" });
 
         const nuevoUsuario = {
             email:                  email.toLowerCase(),
@@ -69,7 +69,7 @@ router.post("/registro", (req, res) => {
             nuevoUsuario.esCuidador   = false;
             nuevoUsuario.valoraciones = [];
             nuevoUsuario.mascotas     = [];
-            res.json({ exito: true, mensaje: "Usuario registrado correctamente.", usuario: nuevoUsuario });
+            res.json({ exito: true, mensaje: "User successfully registered", usuario: nuevoUsuario });
         });
     });
 });
@@ -77,12 +77,12 @@ router.post("/registro", (req, res) => {
 router.post("/recuperarContrasena", (req, res) => {
     const { email, nuevaContrasena } = req.body;
     if (!email || !nuevaContrasena)
-        return res.status(400).json({ exito: false, mensaje: "Faltan campos obligatorios." });
+        return res.status(400).json({ exito: false, mensaje: "Required fields are missing" });
 
     db.query("UPDATE usuarios SET contrasena = ? WHERE email = ?",
         [nuevaContrasena, email.toLowerCase()], (err) => {
         if (err) return res.status(500).json({ exito: false, mensaje: err.message });
-        res.json({ exito: true, mensaje: "Contraseña actualizada correctamente." });
+        res.json({ exito: true, mensaje: "Password successfully updated" });
     });
 });
 
@@ -108,14 +108,14 @@ router.get("/listarUsuarios", (req, res) => {
 router.get("/usuarioPorEmail/:email", (req, res) => {
     obtenerUsuarioCompleto(req.params.email.toLowerCase(), (err, usuario) => {
         if (err)      return res.status(500).json({ exito: false, mensaje: err.message });
-        if (!usuario) return res.status(404).json({ exito: false, mensaje: "Usuario no encontrado." });
+        if (!usuario) return res.status(404).json({ exito: false, mensaje: "User not found" });
         res.json({ exito: true, usuario });
     });
 });
 
 router.post("/actualizarUsuario", (req, res) => {
     const { email, ...campos } = req.body;
-    if (!email) return res.status(400).json({ exito: false, mensaje: "Falta el email." });
+    if (!email) return res.status(400).json({ exito: false, mensaje: "Missing email" });
 
     if (campos.esCuidador !== undefined)
         campos.esCuidador = campos.esCuidador === "true" || campos.esCuidador === true ? 1 : 0;
@@ -125,7 +125,7 @@ router.post("/actualizarUsuario", (req, res) => {
 
         obtenerUsuarioCompleto(email.toLowerCase(), (err, usuario) => {
             if (err) return res.status(500).json({ exito: false, mensaje: err.message });
-            res.json({ exito: true, mensaje: "Usuario actualizado correctamente.", usuario });
+            res.json({ exito: true, mensaje: "User successfully updated", usuario });
         });
     });
 });

@@ -9,7 +9,7 @@ router.post("/addValoracion", (req, res) => {
     const { emailCuidador, emailValorador, nombreValorador, puntuacion, descripcion } = req.body;
 
     if (!emailCuidador || !emailValorador || !puntuacion)
-        return res.status(400).json({ exito: false, mensaje: "Faltan campos obligatorios." });
+        return res.status(400).json({ exito: false, mensaje: "Required fields are missing" });
 
     const nuevaValoracion = {
         emailCuidador:   emailCuidador.toLowerCase(),
@@ -22,7 +22,7 @@ router.post("/addValoracion", (req, res) => {
 
     db.query("INSERT INTO valoraciones SET ?", nuevaValoracion, (err) => {
         if (err) return res.status(500).json({ exito: false, mensaje: err.message });
-        res.json({ exito: true, mensaje: "Valoración añadida correctamente.", valoracion: nuevaValoracion });
+        res.json({ exito: true, mensaje: "Review published", valoracion: nuevaValoracion });
     });
 });
 

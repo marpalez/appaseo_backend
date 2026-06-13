@@ -12,7 +12,7 @@ router.post("/publicarAnuncio", (req, res) => {
             cantidadAnimales, precioPorDia, descripcion, fechaInicio, fechaFin } = req.body;
 
     if (!emailCuidador || !nombreCuidador || !poblacion || !tiposMascota || !fechaInicio || !fechaFin)
-        return res.status(400).json({ exito: false, mensaje: "Faltan campos obligatorios." });
+        return res.status(400).json({ exito: false, mensaje: "Required fields are missing" });
 
     const nuevoAnuncio = {
         id:               uuidv4(),
@@ -33,7 +33,7 @@ router.post("/publicarAnuncio", (req, res) => {
         if (err) return res.status(500).json({ exito: false, mensaje: err.message });
         nuevoAnuncio.tiposMascota = nuevoAnuncio.tiposMascota.split(",");
         nuevoAnuncio.activo       = true;
-        res.json({ exito: true, mensaje: "Anuncio publicado correctamente.", anuncio: nuevoAnuncio });
+        res.json({ exito: true, mensaje: "Pet care request published", anuncio: nuevoAnuncio });
     });
 });
 
@@ -54,7 +54,7 @@ router.get("/listarAnuncios", (req, res) => {
 router.delete("/eliminarAnuncio/:id", (req, res) => {
     db.query("UPDATE anuncios SET activo = 0 WHERE id = ?", [req.params.id], (err) => {
         if (err) return res.status(500).json({ exito: false, mensaje: err.message });
-        res.json({ exito: true, mensaje: "Anuncio eliminado correctamente." });
+        res.json({ exito: true, mensaje: "Pet care request deleted" });
     });
 });
 

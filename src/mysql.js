@@ -22,7 +22,7 @@ router.get("/usuarioPorEmail/:email", (req, res) => {
     const sql = "SELECT * FROM usuarios WHERE email = ?";
     db.query(sql, [req.params.email], (err, result) => {
         if (err)             return res.status(500).json({ exito: false, mensaje: err.message });
-        if (!result.length)  return res.status(404).json({ exito: false, mensaje: "Usuario no encontrado." });
+        if (!result.length)  return res.status(404).json({ exito: false, mensaje: "User not found" });
         res.json({ exito: true, usuario: result[0] });
     });
 });
@@ -33,16 +33,16 @@ router.get("/usuarioPorEmail/:email", (req, res) => {
 router.post("/login", (req, res) => {
     const { email, contrasena } = req.body;
     if (!email || !contrasena)
-        return res.status(400).json({ exito: false, mensaje: "Faltan campos obligatorios." });
+        return res.status(400).json({ exito: false, mensaje: "Required fields are missing" });
 
     const sql = "SELECT * FROM usuarios WHERE email = ?";
     db.query(sql, [email.toLowerCase()], (err, result) => {
         if (err)            return res.status(500).json({ exito: false, mensaje: err.message });
-        if (!result.length) return res.status(404).json({ exito: false, mensaje: "El email introducido no está registrado." });
+        if (!result.length) return res.status(404).json({ exito: false, mensaje: "The email is not registered" });
 
         const usuario = result[0];
         if (usuario.contrasena !== contrasena.toLowerCase())
-            return res.status(401).json({ exito: false, mensaje: "La contraseña es incorrecta." });
+            return res.status(401).json({ exito: false, mensaje: "Incorrect password" });
 
         res.json({ exito: true, mensaje: "Login correcto.", usuario });
     });
@@ -54,7 +54,7 @@ router.post("/login", (req, res) => {
 router.post("/registro", (req, res) => {
     const { email, contrasena, nombre, poblacion } = req.body;
     if (!email || !contrasena || !nombre || !poblacion)
-        return res.status(400).json({ exito: false, mensaje: "Faltan campos obligatorios." });
+        return res.status(400).json({ exito: false, mensaje: "Required fields are missing" });
 
     const sqlCheck = "SELECT id FROM usuarios WHERE email = ?";
     db.query(sqlCheck, [email.toLowerCase()], (err, result) => {
@@ -79,7 +79,7 @@ router.post("/registro", (req, res) => {
         const sql = "INSERT INTO usuarios SET ?";
         db.query(sql, nuevoUsuario, (err, result) => {
             if (err) return res.status(500).json({ exito: false, mensaje: err.message });
-            res.json({ exito: true, mensaje: "Usuario registrado correctamente.", usuario: nuevoUsuario });
+            res.json({ exito: true, mensaje: "User successfully registered", usuario: nuevoUsuario });
         });
     });
 });
@@ -89,7 +89,7 @@ router.post("/registro", (req, res) => {
 // ════════════════════════════════════════════════════════════════════════════
 router.post("/actualizarUsuario", (req, res) => {
     const { email, ...campos } = req.body;
-    if (!email) return res.status(400).json({ exito: false, mensaje: "Falta el email." });
+    if (!email) return res.status(400).json({ exito: false, mensaje: "The email is missing" });
 
     if (campos.esCuidador !== undefined)
         campos.esCuidador = campos.esCuidador === "true" || campos.esCuidador === true ? 1 : 0;
@@ -100,7 +100,7 @@ router.post("/actualizarUsuario", (req, res) => {
 
         db.query("SELECT * FROM usuarios WHERE email = ?", [email.toLowerCase()], (err, result) => {
             if (err) return res.status(500).json({ exito: false, mensaje: err.message });
-            res.json({ exito: true, mensaje: "Usuario actualizado correctamente.", usuario: result[0] });
+            res.json({ exito: true, mensaje: "User successfully updated", usuario: result[0] });
         });
     });
 });
@@ -132,7 +132,7 @@ router.post("/publicarAnuncio", (req, res) => {
             cantidadAnimales, precioPorDia, descripcion, fechaInicio, fechaFin } = req.body;
 
     if (!emailCuidador || !nombreCuidador || !poblacion || !tiposMascota || !fechaInicio || !fechaFin)
-        return res.status(400).json({ exito: false, mensaje: "Faltan campos obligatorios." });
+        return res.status(400).json({ exito: false, mensaje: "Required fields are missing" });
 
     const nuevoAnuncio = {
         id:               require("uuid").v4(),
@@ -151,7 +151,7 @@ router.post("/publicarAnuncio", (req, res) => {
 
     db.query("INSERT INTO anuncios SET ?", nuevoAnuncio, (err) => {
         if (err) return res.status(500).json({ exito: false, mensaje: err.message });
-        res.json({ exito: true, mensaje: "Anuncio publicado correctamente.", anuncio: nuevoAnuncio });
+        res.json({ exito: true, mensaje: "Pet care request published", anuncio: nuevoAnuncio });
     });
 });
 
@@ -162,7 +162,7 @@ router.delete("/eliminarAnuncio/:id", (req, res) => {
     const sql = "UPDATE anuncios SET activo = 0 WHERE id = ?";
     db.query(sql, [req.params.id], (err) => {
         if (err) return res.status(500).json({ exito: false, mensaje: err.message });
-        res.json({ exito: true, mensaje: "Anuncio eliminado correctamente." });
+        res.json({ exito: true, mensaje: "Pet care request removed" });
     });
 });
 
@@ -183,7 +183,7 @@ router.get("/valoraciones/:emailCuidador", (req, res) => {
 router.post("/addValoracion", (req, res) => {
     const { emailCuidador, emailValorador, nombreValorador, puntuacion, descripcion } = req.body;
     if (!emailCuidador || !emailValorador || !puntuacion)
-        return res.status(400).json({ exito: false, mensaje: "Faltan campos obligatorios." });
+        return res.status(400).json({ exito: false, mensaje: "Required fields are missing" });
 
     const nuevaValoracion = {
         emailCuidador:   emailCuidador.toLowerCase(),
@@ -196,7 +196,7 @@ router.post("/addValoracion", (req, res) => {
 
     db.query("INSERT INTO valoraciones SET ?", nuevaValoracion, (err) => {
         if (err) return res.status(500).json({ exito: false, mensaje: err.message });
-        res.json({ exito: true, mensaje: "Valoración añadida correctamente.", valoracion: nuevaValoracion });
+        res.json({ exito: true, mensaje: "Review added correctly", valoracion: nuevaValoracion });
     });
 });
 
