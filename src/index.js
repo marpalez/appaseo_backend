@@ -2,6 +2,10 @@ const express = require("express");
 const app     = express();
 const morgan  = require("morgan");
 const cors    = require("cors");
+const path = require('path');
+
+// ── Profile pictures ─────────────────────────────────────────────────────────────────
+app.use('/fotos', express.static(path.join(__dirname, '../fotos')));
 
 // ── Settings ─────────────────────────────────────────────────────────────────
 app.set("port", process.env.PORT || 3000);
