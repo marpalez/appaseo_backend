@@ -213,13 +213,6 @@
           "puntuacion": 5,
           "descripcion": "The best caregiver in Valencia, without a doubt",
           "fecha": "22/02/2026"
-        },
-        {
-          "emailValorador": "appaseo@gmail.com",
-          "nombreValorador": "appaseo",
-          "puntuacion": 2,
-          "descripcion": "He didn't take it out for a walk",
-          "fecha": "21/4/2026"
         }
       ]
     },
@@ -269,22 +262,6 @@
           "fecha": "18/02/2026"
         }
       ]
-    },
-    {
-      "email": "appaseo@gmail.com",
-      "contrasena": "1234",
-      "nombre": "appaseo",
-      "poblacion": "internet",
-      "descripcion": "",
-      "rutaFotoPerfil": "C:\\Users\\Invitado\\Desktop\\Archivos windows\\DAM-S\\Unity\\PI\\AppaseoBackend\\fotos\\appaseo_at_gmail.com.png",
-      "esCuidador": true,
-      "telefono": "",
-      "fechaRegistro": "21/4/2026",
-      "puedeEnviarFotos": "",
-      "admiteAnimalesCuidados": "",
-      "esFumador": "",
-      "mascotas": [],
-      "valoraciones": []
     }
   ],
   "anuncios": [
@@ -429,54 +406,6 @@
       "fechaInicio": "01/07/2026",
       "fechaFin": "31/08/2026",
       "fechaPublicacion": "01/04/2026",
-      "activo": true
-    },
-    {
-      "id": "f2be4106-364b-4492-beca-fd5fe9348171",
-      "emailCuidador": "appaseo@gmail.com",
-      "nombreCuidador": "appaseo",
-      "poblacion": "internet",
-      "tiposMascota": [
-        "perro"
-      ],
-      "cantidadAnimales": 1,
-      "precioPorDia": 1,
-      "descripcion": "",
-      "fechaInicio": "01/01/2026",
-      "fechaFin": "01/01/2026",
-      "fechaPublicacion": "21/4/2026",
-      "activo": false
-    },
-    {
-      "id": "bbe92c5d-1087-43af-aca0-0e361c9ca9bb",
-      "emailCuidador": "appaseo@gmail.com",
-      "nombreCuidador": "appaseo",
-      "poblacion": "internet",
-      "tiposMascota": [
-        "perro"
-      ],
-      "cantidadAnimales": 1,
-      "precioPorDia": 0,
-      "descripcion": "",
-      "fechaInicio": "01/01/2026",
-      "fechaFin": "01/01/2026",
-      "fechaPublicacion": "21/4/2026",
-      "activo": false
-    },
-    {
-      "id": "b1a7d6ad-98f6-4334-9d9d-3b6f172346a4",
-      "emailCuidador": "appaseo@gmail.com",
-      "nombreCuidador": "appaseo",
-      "poblacion": "internet",
-      "tiposMascota": [
-        "perro"
-      ],
-      "cantidadAnimales": 1,
-      "precioPorDia": 1,
-      "descripcion": "",
-      "fechaInicio": "01/01/2026",
-      "fechaFin": "01/01/2026",
-      "fechaPublicacion": "21/4/2026",
       "activo": true
     }
   ]
