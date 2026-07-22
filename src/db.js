@@ -1,6 +1,3 @@
-// db.js — migrado a MySQL
-// La persistencia ahora se gestiona directamente desde cada archivo de rutas
-// mediante conexiones MySQL a FreeSQLdatabase
 
 const fs   = require("fs");
 const path = require("path");
