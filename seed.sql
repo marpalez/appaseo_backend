@@ -4,47 +4,47 @@ INSERT INTO usuarios
 VALUES
     -- ── spain (4) ──
     ('david@gmail.com',     '1234', 'david',     'spain',       '.', '/fotos/david_at_gmail.com.png',  0, '',          '01/01/2026', '',          '',          ''),
-    ('maria@gmail.com',     '1234', 'maria',     'spain',       'Experienced with dogs and cats, I live near a big park',                             '', 1, '611223344', '03/02/2026', 'si',        'si',        'no'),
-    ('javier@gmail.com',    '1234', 'javier',    'spain',       'Part-time caregiver, I accept small dogs only',                                      '', 1, '622334455', '14/02/2026', 'no',        'no',        'si'),
-    ('carmen@gmail.com',    '1234', 'carmen',    'spain',       '',                                                                                   '', 0, '',          '18/02/2026', '',          '',          ''),
+    ('maria@gmail.com',     '1234', 'maria',     'spain',       'Experienced with dogs and cats, I live near a big park',                             '/fotos/maria_at_gmail.com.png', 1, '611223344', '03/02/2026', 'si',        'si',        'no'),
+    ('javier@gmail.com',    '1234', 'javier',    'spain',       'Part-time caregiver, I accept small dogs only',                                      '/fotos/javier_at_gmail.com.png', 1, '622334455', '14/02/2026', 'no',        'no',        'si'),
+    ('carmen@gmail.com',    '1234', 'carmen',    'spain',       '',                                                                                   '/fotos/carmen_at_gmail.com.png', 0, '',          '18/02/2026', '',          '',          ''),
     -- ── france (4) ──
     ('noelia@gmail.com',    '1234', 'noelia',    'france',      'Animal lover with 5 years of experience caring for all types of pets', '/fotos/noelia_at_gmail.com.png', 1, '612345678', '15/01/2026', 'si',        'consultar', 'no'),
-    ('camille@gmail.com',   '1234', 'camille',   'france',      'Certified dog trainer, daily walks in the countryside',                              '', 1, '633445566', '05/02/2026', 'si',        'consultar', 'no'),
-    ('hugo@gmail.com',      '1234', 'hugo',      'france',      '',                                                                                   '', 0, '',          '09/02/2026', '',          '',          ''),
-    ('lea@gmail.com',       '1234', 'lea',       'france',      'Cat specialist, calm apartment with balcony',                                        '', 1, '644556677', '20/02/2026', 'si',        'no',        'no'),
+    ('camille@gmail.com',   '1234', 'camille',   'france',      'Certified dog trainer, daily walks in the countryside',                              '/fotos/camille_at_gmail.com.png', 1, '633445566', '05/02/2026', 'si',        'consultar', 'no'),
+    ('hugo@gmail.com',      '1234', 'hugo',      'france',      '',                                                                                   '/fotos/hugo_at_gmail.com.png', 0, '',          '09/02/2026', '',          '',          ''),
+    ('lea@gmail.com',       '1234', 'lea',       'france',      'Cat specialist, calm apartment with balcony',                                        '/fotos/lea_at_gmail.com.png', 1, '644556677', '20/02/2026', 'si',        'no',        'no'),
     -- ── italy (4) ──
     ('pablo@gmail.com',     '1234', 'pablo',     'italy',       'I take care of dogs with lots of love, twice a day walks guaranteed', '/fotos/pablo_at_gmail.com.png',  1, '623456789', '20/01/2026', 'si',        'no',        'no'),
-    ('giulia@gmail.com',    '1234', 'giulia',    'italy',       'I grew up with animals, big terrace and lots of patience',                           '', 1, '655667788', '08/02/2026', 'si',        'si',        'no'),
-    ('marco@gmail.com',     '1234', 'marco',     'italy',       '',                                                                                   '', 0, '',          '11/02/2026', '',          '',          ''),
-    ('francesca@gmail.com', '1234', 'francesca', 'italy',       'Vet student, I can handle medication and special care',                              '', 1, '666778899', '25/02/2026', 'consultar', 'si',        'no'),
+    ('giulia@gmail.com',    '1234', 'giulia',    'italy',       'I grew up with animals, big terrace and lots of patience',                           '/fotos/giulia_at_gmail.com.png', 1, '655667788', '08/02/2026', 'si',        'si',        'no'),
+    ('marco@gmail.com',     '1234', 'marco',     'italy',       '',                                                                                   '/fotos/marco_at_gmail.com.png', 0, '',          '11/02/2026', '',          '',          ''),
+    ('francesca@gmail.com', '1234', 'francesca', 'italy',       'Vet student, I can handle medication and special care',                              '/fotos/francesca_at_gmail.com.png', 1, '666778899', '25/02/2026', 'consultar', 'si',        'no'),
     -- ── germany (4) ──
     ('isabel@gmail.com',    '1234', 'isabel',    'germany',     'Specialist in cats and exotic animals, quiet home without children', '/fotos/isabel_at_gmail.com.png', 1, '634567890', '10/01/2026', 'si',        'si',        'no'),
-    ('lukas@gmail.com',     '1234', 'lukas',     'germany',     'Runner, perfect for energetic dogs that need long walks',                            '', 1, '677889900', '06/02/2026', 'si',        'no',        'no'),
-    ('hannah@gmail.com',    '1234', 'hannah',    'germany',     '',                                                                                   '', 0, '',          '13/02/2026', '',          '',          ''),
-    ('felix@gmail.com',     '1234', 'felix',     'germany',     'I work from home, your pet will never be alone',                                     '', 1, '688990011', '22/02/2026', 'no',        'consultar', 'ocasionalmente'),
+    ('lukas@gmail.com',     '1234', 'lukas',     'germany',     'Runner, perfect for energetic dogs that need long walks',                            '/fotos/lukas_at_gmail.com.png', 1, '677889900', '06/02/2026', 'si',        'no',        'no'),
+    ('hannah@gmail.com',    '1234', 'hannah',    'germany',     '',                                                                                   '/fotos/hannah_at_gmail.com.png', 0, '',          '13/02/2026', '',          '',          ''),
+    ('felix@gmail.com',     '1234', 'felix',     'germany',     'I work from home, your pet will never be alone',                                     '/fotos/felix_at_gmail.com.png', 1, '688990011', '22/02/2026', 'no',        'consultar', 'ocasionalmente'),
     -- ── portugal (3) ──
     ('andres@gmail.com',    '1234', 'andres',    'portugal',    'Experienced caregiver in Portugal, I have a large garden', '/fotos/andres_at_gmail.com.png', 1, '645678901', '05/01/2026', 'consultar', 'consultar', 'ocasionalmente'),
-    ('joao@gmail.com',      '1234', 'joao',      'portugal',    'House with garden near the beach, dogs welcome',                                     '', 1, '699001122', '07/02/2026', 'si',        'si',        'no'),
-    ('beatriz@gmail.com',   '1234', 'beatriz',   'portugal',    '',                                                                                   '', 0, '',          '16/02/2026', '',          '',          ''),
+    ('joao@gmail.com',      '1234', 'joao',      'portugal',    'House with garden near the beach, dogs welcome',                                     '/fotos/joao_at_gmail.com.png', 1, '699001122', '07/02/2026', 'si',        'si',        'no'),
+    ('beatriz@gmail.com',   '1234', 'beatriz',   'portugal',    '',                                                                                   '/fotos/beatriz_at_gmail.com.png', 0, '',          '16/02/2026', '',          '',          ''),
     -- ── netherlands (4) ──
     ('cintia@gmail.com',    '1234', 'cintia',    'netherlands', 'new caregiver with great enthusiasm and love for animals', '/fotos/cintia_at_gmail.com.png', 1, '656789012', '25/01/2026', 'si',        'no',        'no'),
-    ('daan@gmail.com',      '1234', 'daan',      'netherlands', 'Bike rides with your dog along the canals, active care',                             '', 1, '610111213', '04/02/2026', 'si',        'no',        'no'),
-    ('sanne@gmail.com',     '1234', 'sanne',     'netherlands', '',                                                                                   '', 0, '',          '12/02/2026', '',          '',          ''),
-    ('bram@gmail.com',      '1234', 'bram',      'netherlands', 'New to pet sitting, flexible schedule and good prices',                              '', 1, '621222324', '26/02/2026', 'consultar', 'no',        'no'),
+    ('daan@gmail.com',      '1234', 'daan',      'netherlands', 'Bike rides with your dog along the canals, active care',                             '/fotos/daan_at_gmail.com.png', 1, '610111213', '04/02/2026', 'si',        'no',        'no'),
+    ('sanne@gmail.com',     '1234', 'sanne',     'netherlands', '',                                                                                   '/fotos/sanne_at_gmail.com.png', 0, '',          '12/02/2026', '',          '',          ''),
+    ('bram@gmail.com',      '1234', 'bram',      'netherlands', 'New to pet sitting, flexible schedule and good prices',                              '/fotos/bram_at_gmail.com.png', 1, '621222324', '26/02/2026', 'consultar', 'no',        'no'),
     -- ── belgium (3) ──
     ('carlos@gmail.com',    '1234', 'carlos',    'belgium',     'Veterinarian by profession, I care for all types of animals with medical knowledge', '/fotos/carlos_at_gmail.com.png', 1, '667890123', '12/01/2026', 'si', 'si', 'no'),
-    ('emma@gmail.com',      '1234', 'emma',      'belgium',     'Family home with kids, pets get attention all day',                                  '', 1, '632333435', '10/02/2026', 'si',        'si',        'no'),
-    ('louis@gmail.com',     '1234', 'louis',     'belgium',     '',                                                                                   '', 0, '',          '19/02/2026', '',          '',          ''),
+    ('emma@gmail.com',      '1234', 'emma',      'belgium',     'Family home with kids, pets get attention all day',                                  '/fotos/emma_at_gmail.com.png', 1, '632333435', '10/02/2026', 'si',        'si',        'no'),
+    ('louis@gmail.com',     '1234', 'louis',     'belgium',     '',                                                                                   '/fotos/louis_at_gmail.com.png', 0, '',          '19/02/2026', '',          '',          ''),
     -- ── sweden (4) ──
     ('lucia@gmail.com',     '1234', 'lucia',     'sweden',      '', '/fotos/lucia_at_gmail.com.png',  0, '',          '18/01/2026', '',          '',          ''),
-    ('erik@gmail.com',      '1234', 'erik',      'sweden',      'Quiet house by the forest, ideal for shy or older pets',                             '', 1, '643444546', '02/02/2026', 'si',        'consultar', 'no'),
-    ('astrid@gmail.com',    '1234', 'astrid',    'sweden',      'Experienced with rodents and birds, gentle handling',                                '', 1, '654555657', '15/02/2026', 'si',        'si',        'no'),
-    ('oskar@gmail.com',     '1234', 'oskar',     'sweden',      '',                                                                                   '', 0, '',          '21/02/2026', '',          '',          ''),
+    ('erik@gmail.com',      '1234', 'erik',      'sweden',      'Quiet house by the forest, ideal for shy or older pets',                             '/fotos/erik_at_gmail.com.png', 1, '643444546', '02/02/2026', 'si',        'consultar', 'no'),
+    ('astrid@gmail.com',    '1234', 'astrid',    'sweden',      'Experienced with rodents and birds, gentle handling',                                '/fotos/astrid_at_gmail.com.png', 1, '654555657', '15/02/2026', 'si',        'si',        'no'),
+    ('oskar@gmail.com',     '1234', 'oskar',     'sweden',      '',                                                                                   '/fotos/oskar_at_gmail.com.png', 0, '',          '21/02/2026', '',          '',          ''),
     -- ── ireland (4) ──
     ('marta@gmail.com',     '1234', 'marta',     'ireland',     'Dog sitter with private yard, specializing in large breed dogs', '/fotos/marta_at_gmail.com.png',  1, '678901234', '08/01/2026', 'si',        'consultar', 'no'),
-    ('liam@gmail.com',      '1234', 'liam',      'ireland',     'Farm experience, comfortable with all animal sizes',                                 '', 1, '665666768', '01/02/2026', 'consultar', 'si',        'no'),
-    ('aoife@gmail.com',     '1234', 'aoife',     'ireland',     'Pet photography included, daily photo updates guaranteed',                           '', 1, '676777879', '17/02/2026', 'si',        'no',        'no'),
-    ('sean@gmail.com',      '1234', 'sean',      'ireland',     '',                                                                                   '', 0, '',          '23/02/2026', '',          '',          '');
+    ('liam@gmail.com',      '1234', 'liam',      'ireland',     'Farm experience, comfortable with all animal sizes',                                 '/fotos/liam_at_gmail.com.png', 1, '665666768', '01/02/2026', 'consultar', 'si',        'no'),
+    ('aoife@gmail.com',     '1234', 'aoife',     'ireland',     'Pet photography included, daily photo updates guaranteed',                           '/fotos/aoife_at_gmail.com.png', 1, '676777879', '17/02/2026', 'si',        'no',        'no'),
+    ('sean@gmail.com',      '1234', 'sean',      'ireland',     '',                                                                                   '/fotos/sean_at_gmail.com.png', 0, '',          '23/02/2026', '',          '',          '');
 
 INSERT INTO anuncios
     (id, emailCuidador, nombreCuidador, poblacion, tiposMascota, cantidadAnimales, precioPorDia, descripcion, fechaInicio, fechaFin, fechaPublicacion, activo)
