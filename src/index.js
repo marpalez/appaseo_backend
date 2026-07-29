@@ -4,9 +4,6 @@ const morgan  = require("morgan");
 const cors    = require("cors");
 const path = require('path');
 
-// ── Profile pictures ─────────────────────────────────────────────────────────────────
-app.use('/fotos', express.static(path.join(__dirname, '../fotos')));
-
 // ── Settings ─────────────────────────────────────────────────────────────────
 app.set("port", process.env.PORT || 3000);
 app.set("json spaces", 2);
@@ -14,6 +11,9 @@ app.set("json spaces", 2);
 // ── Middleware ────────────────────────────────────────────────────────────────
 app.use(morgan("dev"));
 app.use(cors());
+
+// ── Profile pictures ─────────────────────────────────────────────────────────────────
+app.use('/fotos', express.static(path.join(__dirname, '../fotos')));
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
